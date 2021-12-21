@@ -1,17 +1,13 @@
-import React from "react"; //ES6
+import React from 'react';
 
-const Counter = (props) => {
+const Counter = props => {
   const num = 1;
 
   return (
     <div>
-      <p> This box is {props.count} </p>
+      <p>This is box {props.count}</p>
     </div>
-  );
-};
+  )
+}
 
 export default Counter;
-
-// function Counter(){
-
-// } //same as above

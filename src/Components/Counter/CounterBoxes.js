@@ -1,29 +1,31 @@
-import React from "react";
-import CounterBox from "./CounterBox";
+import React from 'react';
+import CounterBox from './CounterBox';
 
 const CounterBoxes = (props) => {
-    //props.count = a number
-    //print out count boxes
+  // props.count = a number
+  // print out count boxes
 
-    const displayBoxes = () => {
-        const output = [];
-        for(let count = 0; count < props.count; count++) {
-            output.push(
-                <CounterBox count={count} />
-            )
-        }
-        return output;
+  const displayBoxes = () => {
+    const output = [];
+    for (let count = 0; count < props.count; count++) {
+      output.push(
+        <CounterBox count={count} key={count} />
+      )
     }
-    return (
-        <div style={{
-            display: 'flex',
-            flexDirection: 'row',
-            flex: 1,
-            flexWrap: 'wrap'
-        }}>
-            {displayBoxes()}
-        </div>
-    )
+    return output;
+  }
+
+  return (
+    <div style={{
+      display: 'flex',
+      flexDirection: "row",
+      flex: 1,
+      flexWrap: 'wrap'
+    }}>
+      {displayBoxes()}
+    </div>
+  )
+
 }
 
-export default CounterBoxes
+export default CounterBoxes;
